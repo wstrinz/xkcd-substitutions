@@ -31,11 +31,33 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
-	
+	v = v.replace(/\bwitnesses\b/g, "these dudes I know");
+	v = v.replace(/\bWitnesses\b/g, "These dudes I know");
+	v = v.replace(/\ballegedly\b/g, "kinda probably");
+	v = v.replace(/\bAllegedly\b/g, "Kinda probably");
+	v = v.replace(/\bnew study\b/g, "tumblr post");
+	v = v.replace(/\bNew study\b/g, "Tumblr post");
+	v = v.replace(/\brebuild\b/g, "avenge");
+	v = v.replace(/\bRebuild\b/g, "Avenge");
+	v = v.replace(/\bspace\b/g, "spaaace");
+	v = v.replace(/\bSpace\b/g, "Spaaace");
+	v = v.replace(/\bgoogle glass\b/g, "virtual boy");
+	v = v.replace(/\bGoogle Glass\b/g, "Virtual Boy");
+	v = v.replace(/\bsmartphone\b/g, "pokedex");
+	v = v.replace(/\bSmartphone\b/g, "Pokedex");
+	v = v.replace(/\belectic\b/g, "Atomic");
+	v = v.replace(/\bElectic\b/g, "atomic");
+	v = v.replace(/\bsenator\b/g, "elf-lord");
+	v = v.replace(/\bSenator\b/g, "Elf-lord");
+	v = v.replace(/\bcar\b/g, "cat");
+	v = v.replace(/\bCar\b/g, "Cat");
+	v = v.replace(/\belection\b/g, "eating contest");
+	v = v.replace(/\bElection\b/g, "Eating Contest");
+	v = v.replace(/\bcongressional leaders\b/g, "river spirits");
+	v = v.replace(/\bCongressional Leaders\b/g, "River Spirits");
+	v = v.replace(/\bHomeland Security\b/g, "Homestar Runner");
+	v = v.replace(/\bcold not be reached for commentb/g, "is guilty and everyone knows it");
+
 	textNode.nodeValue = v;
 }
 
