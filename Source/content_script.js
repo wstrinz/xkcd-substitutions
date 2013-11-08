@@ -45,8 +45,8 @@ function handleText(textNode)
 	v = v.replace(/\bGoogle Glass\b/g, "Virtual Boy");
 	v = v.replace(/\bsmartphone\b/g, "pokedex");
 	v = v.replace(/\bSmartphone\b/g, "Pokedex");
-	v = v.replace(/\belectic\b/g, "Atomic");
-	v = v.replace(/\bElectic\b/g, "atomic");
+	v = v.replace(/\belectric\b/g, "Atomic");
+	v = v.replace(/\bElectric\b/g, "atomic");
 	v = v.replace(/\bsenator\b/g, "elf-lord");
 	v = v.replace(/\bSenator\b/g, "Elf-lord");
 	v = v.replace(/\bcar\b/g, "cat");
