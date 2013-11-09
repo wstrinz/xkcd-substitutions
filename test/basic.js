@@ -50,6 +50,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Pokedex patent war intensifies");
     });
 
+    it("converts 'electric'", function() {
+      substitution
+        .transformText("Bad news for electric toothbrush manufacturers")
+        .should.equal("Bad news for atomic toothbrush manufacturers");
+    });
+
   });
 });
 
