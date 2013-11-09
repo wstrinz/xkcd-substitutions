@@ -56,7 +56,7 @@ function handleText(textNode)
 	v = v.replace(/\bcongressional leaders\b/g, "river spirits");
 	v = v.replace(/\bCongressional Leaders\b/g, "River Spirits");
 	v = v.replace(/\bHomeland Security\b/g, "Homestar Runner");
-	v = v.replace(/\bcold not be reached for commentb/g, "is guilty and everyone knows it");
+	v = v.replace(/\bcould not be reached for commentb/g, "is guilty and everyone knows it");
 
 	textNode.nodeValue = v;
 }
