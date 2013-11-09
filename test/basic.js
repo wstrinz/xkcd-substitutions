@@ -1,12 +1,17 @@
 var assert = require('assert');
 var should = require('should');
+var XkcdSubstitution = require('../Source/XkcdSubstitution.js');
 
-describe('Array', function(){
-  describe('#indexOf()', function(){
-    it('should return -1 when the value is not present', function(){
-      [1,2,3].indexOf(5).should.equal(-1);
-      [1,2,3].indexOf(0).should.equal(-1);
-    })
-  })
-})
+describe('XkcdSubstitution', function() {
+
+  var substitution = new XkcdSubstitution;
+
+  describe("transformText", function() {
+    it("converts 'allegedly'", function() {
+      substitution
+        .transformText("The offense allegedly occured")
+        .should.equal("The offense kinda probably occured");
+    });
+  });
+});
 

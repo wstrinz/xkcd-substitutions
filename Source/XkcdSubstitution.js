@@ -1,4 +1,14 @@
 
+var XkcdSubstitution = function() {
+};
+
+XkcdSubstitution.prototype.transformText = function(text) {
+  var textNode = { nodeValue: text }
+  handleText(textNode);
+  return textNode.nodeValue;
+};
+
+var lol = 123;
 function walk(node) 
 {
 	// I stole this function from here:
@@ -86,4 +96,7 @@ function handleText(textNode)
 	textNode.nodeValue = v;
 }
 
+if (typeof module !== 'undefined') {
+  module.exports = XkcdSubstitution;
+}
 
