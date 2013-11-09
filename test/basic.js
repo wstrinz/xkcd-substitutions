@@ -32,6 +32,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("New plans to avenge the World Trade Center");
     });
 
+    it("converts 'space'", function() {
+      substitution
+        .transformText("Space, the final frontier")
+        .should.equal("Spaaace, the final frontier");
+    });
+
   });
 });
 
