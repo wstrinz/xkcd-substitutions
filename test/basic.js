@@ -62,6 +62,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("U.S. budget talks hit snag, Republican elf-lord says");
     });
 
+    it("converts 'car'", function() {
+      substitution
+        .transformText("Rounds Fired As Armed Police Stop Car")
+        .should.equal("Rounds Fired As Armed Police Stop Cat");
+    });
+
   });
 });
 
