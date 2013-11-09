@@ -33,8 +33,10 @@ XkcdSubstitution.prototype.transformText = function(text) {
 
   text = text.replace(/\bnew study\b/g, "tumblr post");
   text = text.replace(/\bNew study\b/g, "Tumblr post");
+  text = text.replace(/\bNew Study\b/g, "Tumblr Post");
   text = text.replace(/\bnew studies\b/g, "tumblr posts");
   text = text.replace(/\bNew studies\b/g, "Tumblr posts");
+  text = text.replace(/\bNew Studies\b/g, "Tumblr Posts");
 
   text = text.replace(/\brebuild\b/g, "avenge");
   text = text.replace(/\bRebuild\b/g, "Avenge");
@@ -49,18 +51,18 @@ XkcdSubstitution.prototype.transformText = function(text) {
   text = text.replace(/\bgoogle glasses\b/g, "virtual boys");
   text = text.replace(/\bGoogle Glasses\b/g, "Virtual Boys");
 
-  text = text.replace(/\bsmartphone\b/g, "Pokédex");
+  text = text.replace(/\bsmartphone\b/g, "pokédex");
   text = text.replace(/\bSmartphone\b/g, "Pokédex");
-  text = text.replace(/\bsmartphones\b/g, "Pokédexes");
+  text = text.replace(/\bsmartphones\b/g, "pokédexes");
   text = text.replace(/\bSmartphones\b/g, "Pokédexes");
 
   text = text.replace(/\belectric\b/g, "atomic");
   text = text.replace(/\bElectric\b/g, "Atomic");
 
   text = text.replace(/\bsenator\b/g, "elf-lord");
-  text = text.replace(/\bSenator\b/g, "Elf-lord");
+  text = text.replace(/\bSenator\b/g, "Elf-Lord");
   text = text.replace(/\bsenators\b/g, "elf-lords");
-  text = text.replace(/\bSenators\b/g, "Elf-lords");
+  text = text.replace(/\bSenators\b/g, "Elf-Lords");
 
   text = text.replace(/\bcar\b/g, "cat");
   text = text.replace(/\bcars\b/g, "cats");
@@ -69,11 +71,14 @@ XkcdSubstitution.prototype.transformText = function(text) {
 
   text = text.replace(/\belection\b/g, "eating contest");
   text = text.replace(/\bElection\b/g, "Eating Contest");
+  text = text.replace(/\belections\b/g, "eating contests");
+  text = text.replace(/\bElections\b/g, "Eating Contests");
 
   text = text.replace(/congressional leaders/g, "river spirits");
   text = text.replace(/Congressional leaders/g, "River spirits");
   text = text.replace(/Congressional Leaders/g, "River Spirits");
 
+  text = text.replace(/Homeland security/g, "Homestar runner");
   text = text.replace(/Homeland Security/g, "Homestar Runner");
 
   text = text.replace(/could not be reached for comment/g, "is guilty and everyone knows it");

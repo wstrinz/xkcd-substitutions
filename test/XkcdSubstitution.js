@@ -14,10 +14,16 @@ describe('XkcdSubstitution', function() {
         .should.equal("The offense kinda probably occured");
     });
 
-    it("converts 'witnesses'", function() {
+    it("converts 'Witnesses'", function() {
       substitution
         .transformText("Witnesses saw a white van leaving the scene")
         .should.equal("These dudes I know saw a white van leaving the scene");
+    });
+
+    it("converts 'witnesses'", function() {
+      substitution
+        .transformText("Police have appealed for witnesses to contact them")
+        .should.equal("Police have appealed for these dudes I know to contact them");
     });
 
     it("converts 'new study'", function() {
@@ -26,10 +32,22 @@ describe('XkcdSubstitution', function() {
         .should.equal("A tumblr post has caused a stir in Parliament");
     });
 
+    it("converts 'New Studies'", function() {
+      substitution
+        .transformText("New Studies Show Numerous Health Benefits of Tea")
+        .should.equal("Tumblr Posts Show Numerous Health Benefits of Tea");
+    });
+
     it("converts 'rebuild'", function() {
       substitution
         .transformText("New plans to rebuild the World Trade Center")
         .should.equal("New plans to avenge the World Trade Center");
+    });
+
+    it("converts 'rebuilding'", function() {
+      substitution
+        .transformText("Major oyster reef rebuilding begins on Texas coast")
+        .should.equal("Major oyster reef avenging begins on Texas coast");
     });
 
     it("converts 'space'", function() {
@@ -44,10 +62,22 @@ describe('XkcdSubstitution', function() {
         .should.equal("Ticket issued to driver wearing Virtual Boy");
     });
 
-    it("converts 'smartphone'", function() {
+    it("converts 'Google Glasses'", function() {
+      substitution
+        .transformText("For example, prescription Google Glasses could complicate the enforcement of traffic laws.")
+        .should.equal("For example, prescription Virtual Boys could complicate the enforcement of traffic laws.");
+    });
+
+    it("converts 'Smartphone'", function() {
       substitution
         .transformText("Smartphone patent war intensifies")
         .should.equal("Pokédex patent war intensifies");
+    });
+
+    it("converts 'smartphones'", function() {
+      substitution
+        .transformText("What is the next major breakthrough for smartphones?")
+        .should.equal("What is the next major breakthrough for pokédexes?");
     });
 
     it("converts 'electric'", function() {
@@ -62,10 +92,22 @@ describe('XkcdSubstitution', function() {
         .should.equal("U.S. budget talks hit snag, Republican elf-lord says");
     });
 
-    it("converts 'car'", function() {
+    it("converts 'Senators'", function() {
+      substitution
+        .transformText("10 GOP Senators Urge Obama To Fire Sebelius")
+        .should.equal("10 GOP Elf-Lords Urge Obama To Fire Sebelius");
+    });
+
+    it("converts 'Car'", function() {
       substitution
         .transformText("Rounds Fired As Armed Police Stop Car")
         .should.equal("Rounds Fired As Armed Police Stop Cat");
+    });
+
+    it("converts 'cars'", function() {
+      substitution
+        .transformText("Driverless cars set for Britain's streets")
+        .should.equal("Driverless cats set for Britain's streets");
     });
 
     it("converts 'election'", function() {
@@ -74,16 +116,34 @@ describe('XkcdSubstitution', function() {
         .should.equal("Australian eating contest enters final stage");
     });
 
-    it("converts 'congressional leaders'", function() {
+    it("converts 'Elections'", function() {
+      substitution
+        .transformText("Scottish Health Board Elections Abandoned")
+        .should.equal("Scottish Health Board Eating Contests Abandoned");
+    });
+
+    it("converts 'Congressional leaders'", function() {
       substitution
         .transformText("Congressional leaders dismiss clemency for Snowden")
         .should.equal("River spirits dismiss clemency for Snowden");
     });
 
-    it("converts 'homeland security'", function() {
+    it("converts 'Congressional Leaders'", function() {
+      substitution
+        .transformText("Congressional Leaders Dismiss Clemency For Snowden")
+        .should.equal("River Spirits Dismiss Clemency For Snowden");
+    });
+
+    it("converts 'Homeland Security'", function() {
       substitution
         .transformText("Former Pentagon Official to Be Chosen as Homeland Security Chief")
         .should.equal("Former Pentagon Official to Be Chosen as Homestar Runner Chief");
+    });
+
+    it("converts 'Homeland security'", function() {
+      substitution
+        .transformText("Homeland security has also recently taken off as an up-and-coming academic field.")
+        .should.equal("Homestar runner has also recently taken off as an up-and-coming academic field.");
     });
 
     it("converts 'could not be reached for comment'", function() {

@@ -1,7 +1,7 @@
 .DS_Store
-Source.crx
-Source.pem
-Source.zip
+src.crx
+src.pem
+src.zip
 node_modules/
 npm-debug.log
 
