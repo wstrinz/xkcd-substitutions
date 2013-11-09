@@ -80,6 +80,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("River spirits dismiss clemency for Snowden");
     });
 
+    it("converts 'homeland security'", function() {
+      substitution
+        .transformText("Former Pentagon Official to Be Chosen as Homeland Security Chief")
+        .should.equal("Former Pentagon Official to Be Chosen as Homestar Runner Chief");
+    });
+
   });
 });
 
