@@ -71,6 +71,7 @@ XkcdSubstitution.prototype.transformText = function(text) {
   text = text.replace(/\bElection\b/g, "Eating Contest");
 
   text = text.replace(/congressional leaders/g, "river spirits");
+  text = text.replace(/Congressional leaders/g, "River spirits");
   text = text.replace(/Congressional Leaders/g, "River Spirits");
 
   text = text.replace(/Homeland Security/g, "Homestar Runner");

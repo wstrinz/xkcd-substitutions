@@ -74,6 +74,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Australian eating contest enters final stage");
     });
 
+    it("converts 'congressional leaders'", function() {
+      substitution
+        .transformText("Congressional leaders dismiss clemency for Snowden")
+        .should.equal("River spirits dismiss clemency for Snowden");
+    });
+
   });
 });
 
