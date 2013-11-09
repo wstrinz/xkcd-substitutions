@@ -7,11 +7,25 @@ describe('XkcdSubstitution', function() {
   var substitution = new XkcdSubstitution;
 
   describe("transformText", function() {
+
     it("converts 'allegedly'", function() {
       substitution
         .transformText("The offense allegedly occured")
         .should.equal("The offense kinda probably occured");
     });
+
+    it("converts 'witnesses'", function() {
+      substitution
+        .transformText("Witnesses saw a white van leaving the scene")
+        .should.equal("These dudes I know saw a white van leaving the scene");
+    });
+
+    it("converts 'new study'", function() {
+      substitution
+        .transformText("A new study has caused a stir in Parliament")
+        .should.equal("A tumblr post has caused a stir in Parliament");
+    });
+
   });
 });
 
