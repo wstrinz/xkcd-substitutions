@@ -74,6 +74,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("New plans to avenge the World Trade Center");
     });
 
+    it("converts 'Rebuilds'", function() {
+      substitution
+        .transformText("Restaurant Rebuilds Pier After Sandy's Destruction")
+        .should.equal("Restaurant Avenges Pier After Sandy's Destruction");
+    });
+
     it("converts 'rebuilding'", function() {
       substitution
         .transformText("Major oyster reef rebuilding begins on Texas coast")

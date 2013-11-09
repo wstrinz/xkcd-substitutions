@@ -52,6 +52,11 @@ XkcdSubstitution.prototype.transformText = function(text) {
   text = text.replace(/\brebuild\b/g, "avenge");
   text = text.replace(/\bRebuild\b/g, "Avenge");
   text = text.replace(/\bREBUILD\b/g, "AVENGE");
+
+  text = text.replace(/\brebuilds\b/g, "avenges");
+  text = text.replace(/\bRebuilds\b/g, "Avenges");
+  text = text.replace(/\bREBUILDs\b/g, "AVENGES");
+
   text = text.replace(/\brebuilding\b/g, "avenging");
   text = text.replace(/\bRebuilding\b/g, "Avenging");
   text = text.replace(/\bREBUILDING\b/g, "AVENGING");
