@@ -128,6 +128,18 @@ describe('XkcdSubstitution', function() {
         .should.equal("Pokédex patent war intensifies");
     });
 
+    it("converts 'smart phone'", function() {
+      substitution
+        .transformText("Stores tap into smart phone Wi-Fi signals to track shoppers")
+        .should.equal("Stores tap into pokédex Wi-Fi signals to track shoppers");
+    });
+
+    it("converts 'smart-phone'", function() {
+      substitution
+        .transformText("Stores tap into smart-phone Wi-Fi signals to track shoppers")
+        .should.equal("Stores tap into pokédex Wi-Fi signals to track shoppers");
+    });
+
     it("converts 'smartphones'", function() {
       substitution
         .transformText("What is the next major breakthrough for smartphones?")

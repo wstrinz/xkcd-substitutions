@@ -72,12 +72,13 @@ XkcdSubstitution.prototype.transformText = function(text) {
   text = text.replace(/\bGoogle Glasses\b/g, "Virtual Boys");
   text = text.replace(/\bGOOGLE GLASSES\b/g, "VIRTUAL BOYS");
 
-  text = text.replace(/\bsmartphone\b/g, "pokédex");
-  text = text.replace(/\bSmartphone\b/g, "Pokédex");
-  text = text.replace(/\bSMARTPHONE\b/g, "POKÉDEX");
-  text = text.replace(/\bsmartphones\b/g, "pokédexes");
-  text = text.replace(/\bSmartphones\b/g, "Pokédexes");
-  text = text.replace(/\bSMARTPHONES\b/g, "POKÉDEXES");
+  text = text.replace(/\bsmart[- ]?phone\b/g, "pokédex");
+  text = text.replace(/\bSmart[- ]?phone\b/g, "Pokédex");
+  text = text.replace(/\bSMART[- ]?PHONE\b/g, "POKÉDEX");
+
+  text = text.replace(/\bsmart[- ]?phones\b/g, "pokédexes");
+  text = text.replace(/\bSmart[- ]?phones\b/g, "Pokédexes");
+  text = text.replace(/\bSMART[- ]?PHONES\b/g, "POKÉDEXES");
 
   text = text.replace(/\belectric\b/g, "atomic");
   text = text.replace(/\bElectric\b/g, "Atomic");
