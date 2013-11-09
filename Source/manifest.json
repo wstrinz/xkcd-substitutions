@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "XKCD Substitutions",
-	"version": "1.3",
+	"version": "1.4",
 	"description": "Based on XKCD #1288",
 	"content_scripts": 
 	[
