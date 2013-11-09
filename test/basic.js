@@ -56,6 +56,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Bad news for atomic toothbrush manufacturers");
     });
 
+    it("converts 'senator'", function() {
+      substitution
+        .transformText("U.S. budget talks hit snag, Republican senator says")
+        .should.equal("U.S. budget talks hit snag, Republican elf-lord says");
+    });
+
   });
 });
 
