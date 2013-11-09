@@ -32,6 +32,7 @@ Contributors
 
 * [@lightswitch05](https://github.com/lightswitch05)
 * [@willglynn](https://github.com/willglynn)
+* [@toxicFork](https://github.com/toxicFork)
 
 Special thanks to [@hank](https://github.com/hank/)'s [Cloud To Butt
 Plus](https://github.com/hank/cloud-to-butt) extension, on which this is based.
