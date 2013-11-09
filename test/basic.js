@@ -47,7 +47,7 @@ describe('XkcdSubstitution', function() {
     it("converts 'smartphone'", function() {
       substitution
         .transformText("Smartphone patent war intensifies")
-        .should.equal("Pokedex patent war intensifies");
+        .should.equal("Pokédex patent war intensifies");
     });
 
     it("converts 'electric'", function() {
