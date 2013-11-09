@@ -26,6 +26,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("A tumblr post has caused a stir in Parliament");
     });
 
+    it("converts 'rebuild'", function() {
+      substitution
+        .transformText("New plans to rebuild the World Trade Center")
+        .should.equal("New plans to avenge the World Trade Center");
+    });
+
   });
 });
 
