@@ -15,6 +15,18 @@ Available in the [Chrome Web Store](https://chrome.google.com/webstore/detail/xk
 Alternatively, drag `XKCDSubstitutions.crx` onto `chrome://extensions`, which
 you can open via Window > Extensions.
 
+Contributing
+------------
+
+Be sure to check your changes don't break any of the existing unit tests.
+
+```bash
+$ npm install .
+$ make test
+```
+
+Ideally, test-drive any changes to the behaviour of the code where possible.
+
 Contributors
 ------------
 
