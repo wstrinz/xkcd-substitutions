@@ -38,6 +38,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Spaaace, the final frontier");
     });
 
+    it("converts 'google glass'", function() {
+      substitution
+        .transformText("Ticket issued to driver wearing Google Glass")
+        .should.equal("Ticket issued to driver wearing Virtual Boy");
+    });
+
   });
 });
 
