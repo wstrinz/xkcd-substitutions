@@ -68,6 +68,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Rounds Fired As Armed Police Stop Cat");
     });
 
+    it("converts 'election'", function() {
+      substitution
+        .transformText("Australian election enters final stage")
+        .should.equal("Australian eating contest enters final stage");
+    });
+
   });
 });
 
