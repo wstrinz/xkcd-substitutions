@@ -1,6 +1,6 @@
 var assert = require('assert');
 var should = require('should');
-var XkcdSubstitution = require('../Source/XkcdSubstitution.js');
+var XkcdSubstitution = require('../src/XkcdSubstitution.js');
 
 describe('XkcdSubstitution', function() {
 
