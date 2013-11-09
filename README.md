@@ -37,3 +37,8 @@ Contributors
 Special thanks to [@hank](https://github.com/hank/)'s [Cloud To Butt
 Plus](https://github.com/hank/cloud-to-butt) extension, on which this is based.
 
+License
+-------
+
+XKCD Substitutions is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+
