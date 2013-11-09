@@ -44,6 +44,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Ticket issued to driver wearing Virtual Boy");
     });
 
+    it("converts 'smartphone'", function() {
+      substitution
+        .transformText("Smartphone patent war intensifies")
+        .should.equal("Pokedex patent war intensifies");
+    });
+
   });
 });
 
