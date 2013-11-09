@@ -5,7 +5,8 @@
   "keywords"      : ["xkcd"],
   "author"        : "Henry Smith <henry@henrysmith.org>",
   "devDependencies": {
-    "mocha": "1.14.0"
+    "mocha": "1.14.0",
+    "should": "2.0.2"
   },
   "repository": {
     "type": "git",
