@@ -86,6 +86,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Former Pentagon Official to Be Chosen as Homestar Runner Chief");
     });
 
+    it("converts 'could not be reached for comment'", function() {
+      substitution
+        .transformText("Roman Polanski Could Not Be Reached For Comment")
+        .should.equal("Roman Polanski Is Guilty And Everyone Knows It");
+    });
+
   });
 });
 
