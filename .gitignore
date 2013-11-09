@@ -2,4 +2,6 @@
 Source.crx
 Source.pem
 Source.zip
+node_modules/
+npm-debug.log
 
