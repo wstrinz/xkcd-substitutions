@@ -25,9 +25,16 @@ XkcdSubstitution.prototype.traverse = function(node) {
 
 XkcdSubstitution.prototype.transformText = function(text) {
 
-  text = text.replace(/\bwitnesses\b/g, "these dudes I know");
+  text = text.replace(/\b(the )?witness\b/g, "this dude I know");
+  text = text.replace(/\b(The )?witness\b/g, "This dude I know");
+  text = text.replace(/\b(The )?Witness\b/g, "This Dude I Know");
+  text = text.replace(/\b(THE )?WITNESS\b/g, "THIS DUDE I KNOW");
+
+  text = text.replace(/\b(the )?witnesses\b/g, "these dudes I know");
+  text = text.replace(/\bThe witnesses\b/g, "These dudes I know");
+  text = text.replace(/\bThe Witnesses\b/g, "These Dudes I Know");
   text = text.replace(/\bWitnesses\b/g, "These dudes I know");
-  text = text.replace(/\bWITNESSES\b/g, "THESE DUDES I KNOW");
+  text = text.replace(/\b(THE )?WITNESSES\b/g, "THESE DUDES I KNOW");
 
   text = text.replace(/\ballegedly\b/g, "kinda probably");
   text = text.replace(/\bAllegedly\b/g, "Kinda probably");

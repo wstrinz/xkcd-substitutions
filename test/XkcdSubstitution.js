@@ -8,6 +8,12 @@ describe('XkcdSubstitution', function() {
 
   describe("transformText", function() {
 
+    it("converts 'witness'", function() {
+      substitution
+        .transformText("But according to the witness, Mongeon wasn't the one who owed money.")
+        .should.equal("But according to this dude I know, Mongeon wasn't the one who owed money.");
+    });
+
     it("converts 'Witnesses'", function() {
       substitution
         .transformText("Witnesses saw a white van leaving the scene")
@@ -24,6 +30,12 @@ describe('XkcdSubstitution', function() {
       substitution
         .transformText("POLICE HAVE APPEALED FOR WITNESSES TO CONTACT THEM")
         .should.equal("POLICE HAVE APPEALED FOR THESE DUDES I KNOW TO CONTACT THEM");
+    });
+
+    it("converts 'the witnesses'", function() {
+      substitution
+        .transformText("According to the witnesses, the gunman left-handed.")
+        .should.equal("According to these dudes I know, the gunman left-handed.");
     });
 
     it("converts 'allegedly'", function() {
