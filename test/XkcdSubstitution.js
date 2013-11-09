@@ -8,12 +8,6 @@ describe('XkcdSubstitution', function() {
 
   describe("transformText", function() {
 
-    it("converts 'allegedly'", function() {
-      substitution
-        .transformText("The offense allegedly occured")
-        .should.equal("The offense kinda probably occured");
-    });
-
     it("converts 'Witnesses'", function() {
       substitution
         .transformText("Witnesses saw a white van leaving the scene")
@@ -24,6 +18,24 @@ describe('XkcdSubstitution', function() {
       substitution
         .transformText("Police have appealed for witnesses to contact them")
         .should.equal("Police have appealed for these dudes I know to contact them");
+    });
+
+    it("CONVERTS 'WITNESSES'", function() {
+      substitution
+        .transformText("POLICE HAVE APPEALED FOR WITNESSES TO CONTACT THEM")
+        .should.equal("POLICE HAVE APPEALED FOR THESE DUDES I KNOW TO CONTACT THEM");
+    });
+
+    it("converts 'allegedly'", function() {
+      substitution
+        .transformText("The offense allegedly occured")
+        .should.equal("The offense kinda probably occured");
+    });
+
+    it("converts 'ALLEGEDLY'", function() {
+      substitution
+        .transformText("THE OFFENSE ALLEGEDLY OCCURED")
+        .should.equal("THE OFFENSE KINDA PROBABLY OCCURED");
     });
 
     it("converts 'new study'", function() {
@@ -38,6 +50,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Tumblr Posts Show Numerous Health Benefits of Tea");
     });
 
+    it("converts 'NEW STUDY'", function() {
+      substitution
+        .transformText("A NEW STUDY HAS CAUSED A STIR IN PARLIAMENT")
+        .should.equal("A TUMBLR POST HAS CAUSED A STIR IN PARLIAMENT");
+    });
+
     it("converts 'rebuild'", function() {
       substitution
         .transformText("New plans to rebuild the World Trade Center")
@@ -50,10 +68,22 @@ describe('XkcdSubstitution', function() {
         .should.equal("Major oyster reef avenging begins on Texas coast");
     });
 
+    it("converts 'REBUILD'", function() {
+      substitution
+        .transformText("NEW PLANS TO REBUILD THE WORLD TRADE CENTER")
+        .should.equal("NEW PLANS TO AVENGE THE WORLD TRADE CENTER");
+    });
+
     it("converts 'space'", function() {
       substitution
         .transformText("Space, the final frontier")
         .should.equal("Spaaace, the final frontier");
+    });
+
+    it("converts 'SPACE'", function() {
+      substitution
+        .transformText("SPACE, THE FINAL FRONTIER")
+        .should.equal("SPAAACE, THE FINAL FRONTIER");
     });
 
     it("converts 'google glass'", function() {
@@ -68,6 +98,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("For example, prescription Virtual Boys could complicate the enforcement of traffic laws.");
     });
 
+    it("converts 'GOOGLE GLASS'", function() {
+      substitution
+        .transformText("TICKET ISSUED TO DRIVER WEARING GOOGLE GLASS")
+        .should.equal("TICKET ISSUED TO DRIVER WEARING VIRTUAL BOY");
+    });
+
     it("converts 'Smartphone'", function() {
       substitution
         .transformText("Smartphone patent war intensifies")
@@ -80,10 +116,22 @@ describe('XkcdSubstitution', function() {
         .should.equal("What is the next major breakthrough for pokédexes?");
     });
 
+    it("converts 'SMARTPHONE'", function() {
+      substitution
+        .transformText("SMARTPHONE PATENT WAR INTENSIFIES")
+        .should.equal("POKÉDEX PATENT WAR INTENSIFIES");
+    });
+
     it("converts 'electric'", function() {
       substitution
         .transformText("Bad news for electric toothbrush manufacturers")
         .should.equal("Bad news for atomic toothbrush manufacturers");
+    });
+
+    it("converts 'ELECTRIC'", function() {
+      substitution
+        .transformText("BAD NEWS FOR ELECTRIC TOOTHBRUSH MANUFACTURERS")
+        .should.equal("BAD NEWS FOR ATOMIC TOOTHBRUSH MANUFACTURERS");
     });
 
     it("converts 'senator'", function() {
@@ -98,10 +146,22 @@ describe('XkcdSubstitution', function() {
         .should.equal("10 GOP Elf-Lords Urge Obama To Fire Sebelius");
     });
 
+    it("converts 'SENATORS'", function() {
+      substitution
+        .transformText("10 GOP SENATORS URGE OBAMA TO FIRE SEBELIUS")
+        .should.equal("10 GOP ELF-LORDS URGE OBAMA TO FIRE SEBELIUS");
+    });
+
     it("converts 'Car'", function() {
       substitution
         .transformText("Rounds Fired As Armed Police Stop Car")
         .should.equal("Rounds Fired As Armed Police Stop Cat");
+    });
+
+    it("converts 'CAR'", function() {
+      substitution
+        .transformText("ROUNDS FIRED AS ARMED POLICE STOP CAR")
+        .should.equal("ROUNDS FIRED AS ARMED POLICE STOP CAT");
     });
 
     it("converts 'cars'", function() {
@@ -122,6 +182,12 @@ describe('XkcdSubstitution', function() {
         .should.equal("Scottish Health Board Eating Contests Abandoned");
     });
 
+    it("converts 'ELECTIONS'", function() {
+      substitution
+        .transformText("SCOTTISH HEALTH BOARD ELECTIONS ABANDONED")
+        .should.equal("SCOTTISH HEALTH BOARD EATING CONTESTS ABANDONED");
+    });
+
     it("converts 'Congressional leaders'", function() {
       substitution
         .transformText("Congressional leaders dismiss clemency for Snowden")
@@ -132,6 +198,12 @@ describe('XkcdSubstitution', function() {
       substitution
         .transformText("Congressional Leaders Dismiss Clemency For Snowden")
         .should.equal("River Spirits Dismiss Clemency For Snowden");
+    });
+
+    it("converts 'CONGRESSIONAL LEADERS'", function() {
+      substitution
+        .transformText("CONGRESSIONAL LEADERS DISMISS CLEMENCY FOR SNOWDEN")
+        .should.equal("RIVER SPIRITS DISMISS CLEMENCY FOR SNOWDEN");
     });
 
     it("converts 'Homeland Security'", function() {
@@ -146,10 +218,22 @@ describe('XkcdSubstitution', function() {
         .should.equal("Homestar runner has also recently taken off as an up-and-coming academic field.");
     });
 
+    it("converts 'HOMELAND SECURITY'", function() {
+      substitution
+        .transformText("HOMELAND SECURITY HAS ALSO RECENTLY TAKEN OFF AS AN UP-AND-COMING ACADEMIC FIELD.")
+        .should.equal("HOMESTAR RUNNER HAS ALSO RECENTLY TAKEN OFF AS AN UP-AND-COMING ACADEMIC FIELD.");
+    });
+
     it("converts 'could not be reached for comment'", function() {
       substitution
         .transformText("Roman Polanski Could Not Be Reached For Comment")
         .should.equal("Roman Polanski Is Guilty And Everyone Knows It");
+    });
+
+    it("converts 'COULD NOT BE REACHED FOR COMMENT'", function() {
+      substitution
+        .transformText("ROMAN POLANSKI COULD NOT BE REACHED FOR COMMENT")
+        .should.equal("ROMAN POLANSKI IS GUILTY AND EVERYONE KNOWS IT");
     });
 
   });
