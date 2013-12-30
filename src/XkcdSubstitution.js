@@ -88,12 +88,12 @@ var substitutions = {
   },
 
   "smartphone": function (text) {
-    text = text.replace(/\bsmart[- ]?phone\b/g, "pokédex");
-    text = text.replace(/\bSmart[- ]?phone\b/g, "Pokédex");
-    text = text.replace(/\bSMART[- ]?PHONE\b/g, "POKÉDEX");
-    text = text.replace(/\bsmart[- ]?phones\b/g, "pokédexes");
-    text = text.replace(/\bSmart[- ]?phones\b/g, "Pokédexes");
-    text = text.replace(/\bSMART[- ]?PHONES\b/g, "POKÉDEXES");
+    text = text.replace(/\bsmart[- ]?phone\b/g, "pok\xE9dex");
+    text = text.replace(/\bSmart[- ]?phone\b/g, "Pok\xE9dex");
+    text = text.replace(/\bSMART[- ]?PHONE\b/g, "POK\xC9DEX");
+    text = text.replace(/\bsmart[- ]?phones\b/g, "pok\xE9dexes");
+    text = text.replace(/\bSmart[- ]?phones\b/g, "Pok\xE9dexes");
+    text = text.replace(/\bSMART[- ]?PHONES\b/g, "POK\xC9DEXES");
     return text;
   },
 
