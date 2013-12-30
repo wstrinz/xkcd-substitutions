@@ -2,6 +2,10 @@ var assert = require('assert');
 var should = require('should');
 var XkcdSubstitution = require('../src/XkcdSubstitution.js');
 
+if (process.env.COVERAGE) {
+  XkcdSubstitution = require('../tmp/src-cov/XkcdSubstitution.js');
+}
+
 describe('XkcdSubstitution', function() {
 
   var substitution = new XkcdSubstitution;

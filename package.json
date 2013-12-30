@@ -5,11 +5,19 @@
   "keywords"      : ["xkcd"],
   "author"        : "Henry Smith <henry@henrysmith.org>",
   "devDependencies": {
+    "coveralls": "2.6.1",
+    "jscoverage": "0.3.8",
     "mocha": "1.14.0",
+    "mocha-lcov-reporter": "0.0.1",
     "should": "2.0.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/h2s/xkcd-substitutions.git"
+  },
+  "scripts": {
+    "test": "mocha -R nyan",
+    "pretest": "jscoverage src tmp/src-cov",
+    "posttest": "COVERAGE=true mocha -R mocha-lcov-reporter | coveralls"
   }
 }
