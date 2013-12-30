@@ -16,7 +16,7 @@
     "url": "https://github.com/h2s/xkcd-substitutions.git"
   },
   "scripts": {
-    "test": "mocha -R nyan",
+    "test": "mocha",
     "pretest": "jscoverage src tmp/src-cov",
     "posttest": "COVERAGE=true mocha -R mocha-lcov-reporter | coveralls"
   }
