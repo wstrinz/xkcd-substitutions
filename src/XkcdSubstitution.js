@@ -160,7 +160,9 @@ var substitutions = {
 
 XkcdSubstitution.prototype.transformText = function(text) {
   for (var phrase in substitutions) {
-    text = substitutions[phrase](text);
+    if (substitutions.hasOwnProperty(phrase)) {
+      text = substitutions[phrase](text);
+    }
   }
   return text;
 };
