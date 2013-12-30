@@ -6,7 +6,9 @@
   "author"        : "Henry Smith <henry@henrysmith.org>",
   "devDependencies": {
     "coveralls": "2.6.1",
+    "jquery": "1.8.3",
     "jscoverage": "0.3.8",
+    "jsdom": "0.8.10",
     "mocha": "1.14.0",
     "mocha-lcov-reporter": "0.0.1",
     "should": "2.0.2"

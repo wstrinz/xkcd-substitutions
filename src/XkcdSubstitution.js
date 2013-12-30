@@ -5,6 +5,7 @@ var XkcdSubstitution = function() {
 XkcdSubstitution.prototype.traverse = function(node) {
   var child, next;
 
+  console.log(node.nodeType);
   switch (node.nodeType)  {
     case 1:  // Element
     case 9:  // Document
