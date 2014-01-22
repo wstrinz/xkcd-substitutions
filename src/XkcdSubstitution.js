@@ -1,4 +1,3 @@
-
 var XkcdSubstitution = function() {
 };
 
@@ -70,10 +69,11 @@ var substitutions = {
     return text;
   },
 
-  "space": function (text) {
-    text = text.replace(/\bspace\b/g, "spaaace");
-    text = text.replace(/\bSpace\b/g, "Spaaace");
-    text = text.replace(/\bSPACE\b/g, "SPAAACE");
+  "outer space": function (text) {
+    text = text.replace(/\bouter space\b/g, "spaaace");
+    text = text.replace(/\bOuter Space\b/g, "Spaaace");
+    text = text.replace(/\bOuter space\b/g, "Spaaace");
+    text = text.replace(/\bOUTER SPACE\b/g, "SPAAACE");
     return text;
   },
 
